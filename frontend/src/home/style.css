@@ -5,25 +5,45 @@
 }
 
 body{
-    font-family: 'Cabin', sans-serif;
-    background-color: rgb(192, 192, 192);
+    font-family: 'Kalnia', serif;
+    background-color: rgb(82, 92, 102);
 }
 
 header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 12px;
-    background-color: rgb(56, 179, 236);
-    font-size: 30px;
+    padding: 30px;
+    background: linear-gradient(90deg, rgba(255,102,87,1) 7%, rgba(255,157,118,1) 96%);
+    font-size: 25px;
     width: 100%;
     height: 6rem;
-    box-shadow: 3px 2px 1px #686161;
+    box-shadow: 3px 3px 6px #5a525c;
+    color: rgb(254, 255, 255);
 
 }
 
 header a{
     text-decoration: none;
-    color: azure;
+    color: rgb(255, 255, 255);
+}
 
+span{
+    cursor: pointer;
+}
+
+.logo-class{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    top: 3rem;
+    right: 10rem;
+    width: 100%;
+}
+
+#logo{
+    position: absolute;
+    width: 3rem;
 }
