@@ -3,9 +3,10 @@ const form = document.getElementById('form-login');
 form.addEventListener('submit', evento =>{
     evento.preventDefault()
     
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElement('.email').value;
+    const password = document.getElement('.pw').value;
     
+    //Configurar a rota de login na API!
     fetch('http://localhost:8100/login',{
         method:'GET',
         mode:'cors',
