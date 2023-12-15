@@ -1,13 +1,13 @@
-const form = document.getElementById('form-login');
+const form = document.querySelector('.form-login');
 
 form.addEventListener('submit', evento =>{
     evento.preventDefault()
     
-    const email = document.getElement('.email').value;
-    const password = document.getElement('.pw').value;
+    const email = document.querySelector('.email').value;
+    const password = document.querySelector('.password').value;
     
     //Configurar a rota de login na API!
-    fetch('http://localhost:8100/login',{
+    fetch('http://localhost:8100/users/login',{
         method:'GET',
         mode:'cors',
         headers:{

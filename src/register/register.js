@@ -1,4 +1,4 @@
-const form = document.getElementById('form-register');
+const form = document.querySelector('.form-register');
 
 form.addEventListener('submit', evento =>{
     evento.preventDefault()
@@ -7,7 +7,7 @@ form.addEventListener('submit', evento =>{
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     
-    fetch('http://localhost:8100/createUser',{
+    fetch('http://localhost:8100/users/createUser',{
         method:'POST',
         mode:'cors',
         headers:{
