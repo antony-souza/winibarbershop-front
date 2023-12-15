@@ -8,7 +8,7 @@ form.addEventListener('submit', evento =>{
     
     //Configurar a rota de login na API!
     fetch('http://localhost:8100/users/login',{
-        method:'GET',
+        method:'POST',
         mode:'cors',
         headers:{
             'Content-Type':'application/json'
