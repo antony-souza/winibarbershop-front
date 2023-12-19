@@ -5,50 +5,66 @@
 }
 
 body{
-    font-family: 'Kalnia', serif;
-    background-color: rgb(82, 92, 102);
+    background-color: #202020;
+    height: 100vh;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background: linear-gradient(90deg, rgba(255,102,87,1) 7%, rgba(255,157,118,1) 96%);
-    font-size: 25px;
+.menu-lateral{
+    background-color: #202020;
+    width:60px;
+    height: 100%;
+    padding: 40px 0px 40px 1%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    box-shadow: 3px 0px 0px #45d8f1;
+}
+
+.menu-lateral:hover{
+    width: 300px;
+    transition: 1s;
+}
+
+.btn-open{
     width: 100%;
-    height: 6rem;
-    box-shadow: 3px 3px 6px #5a525c;
-    color: rgb(254, 255, 255);
+    padding-bottom: 12px;
 }
 
-header a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-span{
+.btn-open span{
+    color: aliceblue;
+    font-size: 40px;
     cursor: pointer;
 }
 
-.logo{
-    position: relative;
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.itens-menu{
+    transition: 1s;
+}
+
+ul li.itens-menu:hover{
+    background-color: #45d8f1;
+}
+
+ul li.itens-menu a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 12px;
+
     display: flex;
-    justify-content: center;
-    top: -5rem;
+    margin-left: -12px;
+    gap: 30px;
+    align-items: center;
 }
 
-.logo img{
-    width: 4rem;
-    transition: transform 0.3s ease-in-out;
-    
-}
+ul li.itens-menu a .icon > span{
+    display: flex;
+    font-size: 35px;
 
-.logo img:hover{
-    transform: scale(1.2);  
-}
-
-#agend-border{
-    border-right: 1px solid #fff;
-    padding-right: 15px;
 }
