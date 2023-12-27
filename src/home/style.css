@@ -27,20 +27,13 @@ body{
     transition: 1s;
 }
 
-.btn-open{
-    width: 100%;
-    padding-bottom: 12px;
-}
-
-.btn-open span{
-    color: aliceblue;
-    font-size: 40px;
-    cursor: pointer;
-}
-
 ul{
     height: 100%;
     list-style-type: none;
+}
+
+.itens-menu{
+    height: 100px;
 }
 
 ul li.itens-menu{
@@ -48,7 +41,7 @@ ul li.itens-menu{
 }
 
 ul li.itens-menu:hover{
-    background-color: #45d8f1;
+    background-color: #49808a;
 }
 
 ul li.itens-menu a{
