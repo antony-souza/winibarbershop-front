@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #202020;
+    height: 100vh;
+}
+
+.menu-lateral{
+    background-color: #202020;
+    width:60px;
+    height: 100%;
+    padding: 40px 0px 40px 1%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    box-shadow: 3px 0px 0px #45d8f1;
+}
+
+.menu-lateral:hover{
+    width: 300px;
+    transition: 1s;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+.itens-menu{
+    height: 100px;
+}
+
+ul li.itens-menu{
+    transition: 1s;
+}
+
+ul li.itens-menu:hover{
+    background-color: #49808a;
+}
+
+ul li.itens-menu a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 12px;
+
+    display: flex;
+    margin-left: -12px;
+    gap: 30px;
+    align-items: center;
+}
+
+ul li.itens-menu a .icon > span{
+    display: flex;
+    font-size: 35px;
+
+}
+
+.barber-wini{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.barber-wini img{
+    width: 15rem;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px #504a4a;
+}
