@@ -18,16 +18,22 @@
                 <img src="./img/barber-pole-svgrepo-com.svg">
                 <h1>Redefinir senha:</h1>
                 <input id="email-login" type="email" placeholder="Digite seu email" require>
-                <input id="token-reset" type="text" placeholder="Token" require>
-                <input id="password-reset" type="text" placeholder="Nova senha" require>
-                <button type="submit">Enviar</button>
+                <input id="token-reset" type="text" placeholder="Digite o código" disabled require>
+                <input id="newPassword-reset" type="text" placeholder="Nova senha" disabled require>
+                <div class="button-reset">
+                    <button id="verificar-reset">Verificar</button>
+                    <button id="enviar-update-reset">Enviar</button>
+                </div>
             </form>
         </div>
         <div class="toggle-container">
             <div class="toggle">
                     <div class="toggle-panel toggle-right">
                         <h1>Barbershop!</h1>
-                    <p>Verifique seu e-mail para copiar o Token!</p>
+                        <p>Coloque as informações e toque no botão 
+                        "verificar" para checar se está tudo certo! :)
+                        </p>
+                    <p>Verifique seu e-mail para receber o código!</p>
                 </div>
             </div>
         </div>

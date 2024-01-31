@@ -20,7 +20,7 @@ body{
 .container{
     background-color: rgb(36, 42, 59);
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 5px 15px rgba(112, 111, 111, 0.35);
     position: relative;
     overflow: hidden;
     width: 768px;
@@ -98,6 +98,11 @@ body{
     width: 50%;
     z-index: 2;
 }
+
+.sign-in #token-reset,#newPassword-reset{
+    cursor: not-allowed;
+}
+
 
 .sign-in img{
     width: 30%;
@@ -183,4 +188,13 @@ body{
 
 h1{
     color: #fff;
+}
+
+.button-reset{
+    display: flex;
+    gap: 5px;
+}
+
+.button-reset #enviar-update-reset{
+    cursor: not-allowed;
 }
