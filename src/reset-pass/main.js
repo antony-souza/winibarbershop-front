@@ -4,7 +4,7 @@ formReset.addEventListener('submit', e =>{
     
     const email = document.getElementById('email-login').value;
 
-    fetch('http://localhost:8100/users/reset',{
+    fetch('http://localhost:8100/users/reset/email',{
         method:'POST',
         mode:'cors',
         headers:{
@@ -16,7 +16,7 @@ formReset.addEventListener('submit', e =>{
     })
     .then((response) => response.json())
     .then((data) => {
-        document.getElementById('email-login').value = '';
+    document.getElementById('email-login').value = '';
      console.log(data);
 
 })})
