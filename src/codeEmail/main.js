@@ -1,25 +1,26 @@
-const formReset = document.getElementById('form-reset');
+const formReset = document.getElementById('form-code');
 formReset.addEventListener('submit', e =>{
     e.preventDefault()
     
-    const email = document.getElementById('email-login').value;
+    const code = document.getElementById('codeMail').value;
 
-    fetch('http://localhost:8100/users/reset/email',{
+    fetch('http://localhost:8100/users/reset/code/',{
         method:'POST',
         mode:'cors',
-        headers:{
+        headers:
+        {
             'Content-Type':'application/json'
         },
         body: JSON.stringify({
-            email: email
+            code: code
         })
     })
     .then((response) => response.json())
     .then((data) => {
-    document.getElementById('email-login').value = '';
+    document.getElementById('codeMail').value = '';
     
     if(data.success){
-        window.location.href = '/src/codeEmail/codeEmail.html';
+        window.location.href = '/src/newPassword-reset/newPassword.html';
     }else {
         
         console.error('Envio de código falhou:', data.error || 'Erro desconhecido.');

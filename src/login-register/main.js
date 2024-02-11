@@ -19,7 +19,7 @@ formLogin.addEventListener('submit', evento =>{
     const passwordLogin = document.getElementById('password-login').value;
     
     //Verificar a rota de login na API!
-    fetch('http://localhost:8100/users/login',{
+    fetch('http://localhost:8100/users/auth',{
         method:'POST',
         mode:'cors',
         headers:{
