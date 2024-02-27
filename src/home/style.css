@@ -11,50 +11,37 @@ body{
 
 .menu-lateral{
     background-color: #202020;
-    width:60px;
+    width:90px;
     height: 100%;
-    padding: 40px 0px 40px 1%;
     position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
-
+    margin: 2px;
     box-shadow: 3px 0px 0px #45d8f1;
 }
 
-.menu-lateral:hover{
-    width: 300px;
-    transition: 1s;
-}
 
 ul{
-    height: 100%;
     list-style-type: none;
-}
-
-.itens-menu{
-    height: 100px;
-}
-
-ul li.itens-menu{
-    transition: 1s;
-}
-
-ul li.itens-menu:hover{
-    background-color: #49808a;
 }
 
 ul li.itens-menu a{
     color: aliceblue;
     text-decoration: none;
     font-size: 30px;
-    padding: 12px;
-
     display: flex;
-    margin-left: -12px;
-    gap: 30px;
+    justify-content: center;
     align-items: center;
+    padding-bottom: 25px;
 }
+
+ul li:hover{
+    background-color: #45d8f1;
+    transition: 1.5s;
+
+}
+
 
 ul li.itens-menu a .icon > span{
     display: flex;

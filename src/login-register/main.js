@@ -12,18 +12,17 @@ loginBtn.addEventListener('click', () => {
 
 const formLogin = document.querySelector('.sign-in');
 
-formLogin.addEventListener('submit', evento =>{
-    evento.preventDefault()
+formLogin.addEventListener('submit', evento => {
+    evento.preventDefault();
     
     const emailLogin = document.getElementById('email-login').value;
     const passwordLogin = document.getElementById('password-login').value;
-    
-    //Verificar a rota de login na API!
-    fetch('http://localhost:8100/users/auth',{
-        method:'POST',
-        mode:'cors',
-        headers:{
-            'Content-Type':'application/json'
+
+    fetch('http://localhost:8100/users/auth', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify({
             email: emailLogin,
@@ -31,22 +30,46 @@ formLogin.addEventListener('submit', evento =>{
         })
     })
     .then((response) => response.json())
-    .then((data) => {
-        console.log(data);
-        document.getElementById('email-register').value = '';
-        document.getElementById('password-register').value = '';
+    .then(data => {
+        const { token } = data;
 
-        if(data.success){
+        localStorage.setItem('token', token);
+
+       
+        fetchTokenInfo();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
+function fetchTokenInfo() {
+    fetch('http://localhost:8100/users/auth/gettoken', {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to fetch token info');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+         if(data.success){
             window.location.href = '/src/home/home.html';
         }else {
             
-            console.error('Login falhou:', data.error || 'Erro desconhecido.');
-        }
+            console.error('Error ao redirecionar', data.error || 'Erro desconhecido.');
+        } 
     })
-    .catch((error) => {
-        console.error('Erro:', error);
+    .catch(error => {
+        console.error('Error:', error);
     });
-})
+}
 
 const formRegister = document.querySelector('.sign-up');
 
