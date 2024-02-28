@@ -1,25 +1,27 @@
 const formAgendamento = document.getElementById('agendamentoForm');
 
-formAgendamento.addEventListener('submit', e =>{
-    e.preventDefault()
+formAgendamento.addEventListener('submit', e => {
+    e.preventDefault();
 
-    const dataHour = document.getElementById('dataHour').value;
+    const dataHour = document.getElementById('dataHora').value; // Corrigido o ID para 'dataHora'
     const barbeiro = document.getElementById('barbeiro').value;
 
-    fetch('http://localhost:8100/agendar',{
-        method:'POST',
-        mode:'cors',
-        headers:{
+    fetch('http://localhost:8100/agendar', { // Removido o espaço em branco após a URL
+        method: 'POST',
+        mode: 'cors',
+        headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            dataHour:dataHour,
-            barbeiro:barbeiro
+            dataHour: dataHour,
+            barbeiro: barbeiro
         })
     })
-    .then((reponse) => reponse.json())
-    .then((data) =>{
-        console.log(data)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
     })
-
+    .catch(error => {
+        console.error('Erro ao enviar o formulário:', error);
+    });
 });
