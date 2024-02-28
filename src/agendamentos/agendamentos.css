@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #202020;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.menu-lateral{
+    background-color: #202020;
+    width: 90px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    margin: 2px;
+    box-shadow: 3px 0px 0px #45d8f1;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li.itens-menu a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+ul li:hover{
+    background-color: #45d8f1;
+    transition: 1.5s;
+}
+
+ul li.itens-menu a .icon > span{
+    display: flex;
+    font-size: 35px;
+}
+
+.conteudo {
+    margin-left: 100px; /* Ajuste de acordo com a largura do menu lateral */
+    padding: 20px;
+}
+
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ajuste conforme necessário */
+    margin: 20px auto;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formulario input[type="datetime-local"],
+.formulario select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 10px;
+    background-color: #45d8f1;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #1aa8bb;
+}

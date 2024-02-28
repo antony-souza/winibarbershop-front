@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/home/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="./agendamentos.css">
+    <title>BarberShop - Agendamentos</title>
+</head>
+<body>  
+    <nav class="menu-lateral">
+        <ul>
+            <li class="itens-menu">
+                <a href="#">
+                    <span class="icon">
+                        <span class="material-symbols-outlined">home</span>
+                    </span>
+                </a>
+            </li>
+            <li class="itens-menu" >
+                <a href="#" >
+                    <span class="icon">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                    </span>
+                </a>
+            </li>
+            <li class="itens-menu">
+                <a href="#">
+                    <span class="icon">
+                        <span class="material-symbols-outlined">call</span>
+                    </span>
+                </a>
+            </li>
+            <li class="itens-menu">
+                <a href="#">
+                    <span class="icon">
+                        <span class="material-symbols-outlined">account_circle</span>
+                    </span>
+                </a>
+            </li>
+            <li class="itens-menu">
+                <a href="#">
+                    <span class="icon">
+                        <span class="material-symbols-outlined">help_center</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav> 
+
+    <div class="conteudo">
+        <form id="agendamentoForm" class="formulario">
+            <h1>Agendamento de Barbearia</h1>
+            <label for="dataHora">Data e Hora:</label>
+            <input type="datetime-local" id="dataHour" name="dataHora" required><br><br>
+            
+            <label for="barbeiro">Escolha o Barbeiro:</label>
+            <select id="barbeiro" name="barbeiro" required>
+                <option value="Winicius">Winicius</option>
+                <option value="João">João</option>
+            </select><br><br>
+
+            <button type="submit">Agendar</button>
+        </form>
+    </div>
+
+    <script src="agendamentos.js"></script>
+</body>
+</html>

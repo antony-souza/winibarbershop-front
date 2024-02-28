@@ -35,7 +35,6 @@ formLogin.addEventListener('submit', evento => {
 
         localStorage.setItem('token', token);
 
-       
         fetchTokenInfo();
     })
     .catch(error => {
