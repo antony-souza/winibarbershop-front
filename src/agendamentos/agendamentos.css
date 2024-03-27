@@ -52,12 +52,22 @@ ul li.itens-menu a .icon > span{
 }
 
 .formulario {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(79, 224, 230);
     width: 300px; /* Ajuste conforme necessário */
     margin: 20px auto;
+}
+.formulario #client{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .formulario label {
@@ -88,4 +98,8 @@ ul li.itens-menu a .icon > span{
 
 .formulario button:hover {
     background-color: #1aa8bb;
+}
+
+.formulario h1 {
+    text-align: center;
 }

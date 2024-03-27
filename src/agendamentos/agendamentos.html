@@ -51,9 +51,11 @@
 
     <div class="conteudo">
         <form id="agendamentoForm" class="formulario">
-            <h1>Agendamento de Barbearia</h1>
+            <h1>Agendamento</h1>
+            <label for="name">Seu nome/apelido:</label>
+            <input type="text" id="client" name="client" required><br>
             <label for="dataHora">Data e Hora:</label>
-            <input type="datetime-local" id="dataHora" name="dataHora" required><br><br>
+            <input type="datetime-local" id="dataHora" name="dataHora" required><br>
             
             <label for="barbeiro">Escolha o Barbeiro:</label>
             <select id="barbeiro" name="barbeiro" required>
