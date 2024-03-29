@@ -2,6 +2,6 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "main.html" },
     { "source": "/main2(.*)", "destination": "main2.html"},
-    { "source": "/login(.*)", "destination": "src/login-register/index.html"}
+    { "source": "/login(.*)", "destination": "./src/login-register/index.html"}
   ]
 }
