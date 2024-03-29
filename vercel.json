@@ -1,8 +1,5 @@
 {
   "rewrites": [
-    { "source": "/src/login-register/(.*)", "destination": "/src/login-register/index.html" },
-    { "source": "/src/reset-pass/(.*)", "destination": "/src/reset-pass/reset-pass.html" },
-    { "source": "/src/login-register/(.*)", "destination": "/src/login-register/$1" },
-    { "source": "/src/reset-pass/(.*)", "destination": "/src/reset-pass/$1" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
