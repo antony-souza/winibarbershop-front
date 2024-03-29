@@ -1,5 +1,0 @@
-{
-    "rewrites": [
-      { "source": "/(.*)", "destination": "src/login-register/index.html" }
-    ]
-  }
