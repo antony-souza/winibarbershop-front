@@ -6,7 +6,7 @@ formNewPassword.addEventListener('submit', e => {
     const newPassword = document.getElementById('newPassword').value;
     const newPasswordConfirm = document.getElementById('newPassword-confirm').value;
 
-    fetch('https://winibarbershop-back-6hile7zaua-uw.a.run.app', { 
+    fetch(process.env.API, { 
         method:'PUT',
         mode:'cors',
         headers:{

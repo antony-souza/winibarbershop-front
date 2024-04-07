@@ -18,7 +18,7 @@ formLogin.addEventListener('submit', evento => {
     const emailLogin = document.getElementById('email-login').value;
     const passwordLogin = document.getElementById('password-login').value;
 
-    fetch('https://winibarbershop-back-6hile7zaua-uw.a.run.app', {
+    fetch(process.env.API, {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -43,7 +43,7 @@ formLogin.addEventListener('submit', evento => {
 });
 
 function fetchTokenInfo() {
-    fetch('https://winibarbershop-back-6hile7zaua-uw.a.run.app', {
+    fetch(process.env.API, {
         method: 'GET',
         mode: 'cors',
         headers: {
@@ -79,7 +79,7 @@ formRegister.addEventListener('submit', evento =>{
     const emailRegister = document.getElementById('email-register').value;
     const passwordRegister = document.getElementById('password-register').value;
     
-    fetch('https://winibarbershop-back-6hile7zaua-uw.a.run.app',{
+    fetch(process.env.API,{
         method:'POST',
         mode:'cors',
         headers:{

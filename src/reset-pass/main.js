@@ -4,7 +4,7 @@ formReset.addEventListener('submit', e =>{
     
     const email = document.getElementById('email-login').value;
 
-    fetch('https://winibarbershop-back-6hile7zaua-uw.a.run.app',{
+    fetch(process.env.API,{
         method:'POST',
         mode:'cors',
         headers:{
