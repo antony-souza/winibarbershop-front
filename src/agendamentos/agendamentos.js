@@ -9,7 +9,7 @@ formAgendamento.addEventListener('submit', e => {
 
     const token = localStorage.getItem('token');
 
-    fetch('http://localhost:8100/Schedule', {
+    fetch('https://winibarbershop-back-6hile7zaua-uw.a.run.app', {
         method: 'POST',
         mode: 'cors',
         headers: {
