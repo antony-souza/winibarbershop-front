@@ -4,7 +4,7 @@ formReset.addEventListener('submit', e =>{
     
     const code = document.getElementById('codeMail').value;
 
-    fetch(process.env.API,{
+    fetch('http://localhost:8100/reset/code',{
         method:'POST',
         mode:'cors',
         headers:

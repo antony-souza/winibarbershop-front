@@ -6,7 +6,7 @@ formNewPassword.addEventListener('submit', e => {
     const newPassword = document.getElementById('newPassword').value;
     const newPasswordConfirm = document.getElementById('newPassword-confirm').value;
 
-    fetch(process.env.API, { 
+    fetch('http://localhost:8100/reset/newpassword', { 
         method:'PUT',
         mode:'cors',
         headers:{

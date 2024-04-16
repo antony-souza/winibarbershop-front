@@ -4,7 +4,7 @@ formReset.addEventListener('submit', e =>{
     
     const email = document.getElementById('email-login').value;
 
-    fetch(process.env.API,{
+    fetch('http://localhost:8100/reset/email',{
         method:'POST',
         mode:'cors',
         headers:{

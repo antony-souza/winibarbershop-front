@@ -18,7 +18,7 @@ formLogin.addEventListener('submit', evento => {
     const emailLogin = document.getElementById('email-login').value;
     const passwordLogin = document.getElementById('password-login').value;
 
-    fetch(process.env.API, {
+    fetch(auth, {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -43,7 +43,7 @@ formLogin.addEventListener('submit', evento => {
 });
 
 function fetchTokenInfo() {
-    fetch(process.env.API, {
+    fetch(getToken, {
         method: 'GET',
         mode: 'cors',
         headers: {
@@ -79,7 +79,7 @@ formRegister.addEventListener('submit', evento =>{
     const emailRegister = document.getElementById('email-register').value;
     const passwordRegister = document.getElementById('password-register').value;
     
-    fetch(process.env.API,{
+    fetch('http://localhost:8100/createUser',{
         method:'POST',
         mode:'cors',
         headers:{
