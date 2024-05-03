@@ -6,6 +6,7 @@ formAgendamento.addEventListener('submit', e => {
     const name = document.getElementById('client').value;
     const dateHour = document.getElementById('dataHora').value;
     const employee = document.getElementById('barbeiro').value;
+    const haircut = document.getElementById('haircut').value
 
     const token = localStorage.getItem('token');
 
@@ -19,7 +20,8 @@ formAgendamento.addEventListener('submit', e => {
         body: JSON.stringify({
             client: name,
             dateHour: dateHour,
-            employee: employee
+            employee: employee,
+            haircut:haircut
         })
     })
     .then(response => response.json())
@@ -28,11 +30,12 @@ formAgendamento.addEventListener('submit', e => {
         document.getElementById('client').value = '';
         document.getElementById('dataHora').value = '';
         document.getElementById('barbeiro').value = '';
+        document.getElementById('haircut').value = '';
 
         console.log(data);
     })
     .catch(error => {
         console.error('Erro:', error);
-        alert('Ocorreu um erro ao processar de agendamento');
+        alert('Ocorreu um erro no agendamento');
     });
 });

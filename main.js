@@ -18,7 +18,7 @@ formLogin.addEventListener('submit', evento => {
     const emailLogin = document.getElementById('email-login').value;
     const passwordLogin = document.getElementById('password-login').value;
 
-    fetch(auth, {
+    fetch('http://localhost:8100/auth', {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -43,7 +43,7 @@ formLogin.addEventListener('submit', evento => {
 });
 
 function fetchTokenInfo() {
-    fetch(getToken, {
+    fetch('http://localhost:8100/gettoken', {
         method: 'GET',
         mode: 'cors',
         headers: {
