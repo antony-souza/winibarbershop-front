@@ -12,7 +12,7 @@ formGPT.addEventListener('submit', async (e) => {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
-                Authorization: "Bearer " + "sk-proj-vN0duIA0I5jf2AZu5K9OT3BlbkFJ6hdGWmNQi9JvjClFS0ZG"
+                Authorization: "Bearer " + process.env.GPT_KEY
             },
             body: JSON.stringify({
                 model: "davinci-002",
