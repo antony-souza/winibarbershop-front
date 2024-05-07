@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #202020;
+    height: 100vh;
+}
+
+.menu-lateral{
+    background-color: #202020;
+    width:90px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    margin: 2px;
+    box-shadow: 3px 0px 0px #45d8f1;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+ul li.itens-menu a{
+    color: aliceblue;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+ul li:hover{
+    background-color: #45d8f1;
+    transition: 1.5s;
+
+}
+
+
+ul li.itens-menu a .icon > span{
+    display: flex;
+    font-size: 50px;
+
+}
+
+
+form{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px  #45d8f1;
+    width: 500px; /* Ajuste conforme necessário */
+    margin: 30px auto;
+    color: white;
+    top: 40%;
+    left: 50%;
+    transform: translate(-39%, -50%);
+    gap: 12px;
+}
+
+ textarea{
+    max-width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form #btn-request{
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #45d8f1;
+    background-color: #202020;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
