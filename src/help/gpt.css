@@ -48,12 +48,8 @@ ul li.itens-menu a .icon > span{
 
 }
 
-.conteudo {
-    margin-left: 100px; /* Ajuste de acordo com a largura do menu lateral */
-    padding: 20px;
-}
 
-.formulario {
+form{
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -67,19 +63,12 @@ ul li.itens-menu a .icon > span{
     top: 40%;
     left: 50%;
     transform: translate(-39%, -50%);
+    gap: 12px;
 }
 
-.formulario #client{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-.formulario textarea{
+ textarea{
     max-width: 100%;
-    height: auto;
+    height: 50px;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -87,36 +76,12 @@ ul li.itens-menu a .icon > span{
     font-size: 16px;
 }
 
-.formulario label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.formulario input[type="datetime-local"],
-.formulario select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.formulario button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0d7d91;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 18px;
+form #btn-request{
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #45d8f1;
+    background-color: #202020;
+    color: white;
     cursor: pointer;
-}
-
-.formulario button:hover {
-    background-color: #1aa8bb;
-}
-
-.formulario h1 {
-    text-align: center;
+    font-size: 20px;
 }

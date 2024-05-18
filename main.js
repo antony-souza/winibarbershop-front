@@ -43,6 +43,7 @@ formLogin.addEventListener('submit', evento => {
 });
 
 function fetchTokenInfo() {
+    
     fetch('http://localhost:8100/gettoken', {
         method: 'GET',
         mode: 'cors',
@@ -66,7 +67,7 @@ function fetchTokenInfo() {
         } 
     })
     .catch(error => {
-        console.error('Error:', error);
+        console.log('Error:', error);
     });
 }
 
