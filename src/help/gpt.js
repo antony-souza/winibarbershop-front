@@ -1,5 +1,5 @@
 const formGPT = document.getElementById("form-gpt");
-        const responseGPT = document.getElementById("response-gpt");
+const responseGPT = document.getElementById("response-gpt");
 
         formGPT.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -15,7 +15,7 @@ const formGPT = document.getElementById("form-gpt");
                     body: JSON.stringify({
                         model: "gpt-3.5-turbo",
                         temperature: 1.0,
-                        max_tokens: 2080,
+                        max_tokens: 3000,
                         messages: [
                             { "role": "system", "content": "You are a helpful assistant designed to output JSON." },
                             { "role": "user", "content": message }
