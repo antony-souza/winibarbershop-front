@@ -9,46 +9,6 @@ body{
     height: 100vh;
 }
 
-.menu-lateral{
-    background-color: #202020;
-    width:90px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    margin: 2px;
-    box-shadow: 3px 0px 0px #45d8f1;
-}
-
-
-ul{
-    list-style-type: none;
-}
-
-ul li.itens-menu a{
-    color: aliceblue;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 25px;
-}
-
-ul li:hover{
-    background-color: #45d8f1;
-    transition: 1.5s;
-
-}
-
-
-ul li.itens-menu a .icon > span{
-    display: flex;
-    font-size: 50px;
-
-}
-
-
 form{
     display: flex;
     position: absolute;
@@ -84,4 +44,48 @@ form #btn-request{
     color: white;
     cursor: pointer;
     font-size: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #005580;
+    padding: 12px;
+    height: 60px;
+}
+
+.logout-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+li {
+    list-style-type: none;
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.material-symbols-outlined {
+    font-size: 36px; 
+}
+
+.text-icon {
+    font-size: 18px; 
+}
+
+span{
+    color: white;
 }

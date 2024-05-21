@@ -1,102 +1,114 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #202020;
-    height: 100vh;
-}
-
-.menu-lateral{
-    background-color: #202020;
-    width:90px;
+html, body {
+    width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    margin: 2px;
-    box-shadow: 3px 0px 0px #45d8f1;
+    margin: 0;
+    padding: 0;
 }
 
-
-ul{
-    list-style-type: none;
-}
-
-ul li.itens-menu a{
-    color: aliceblue;
-    text-decoration: none;
+body {
+    background-color: #202020;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding-bottom: 25px;
+    color: white;
 }
 
-ul li:hover{
-    background-color: #45d8f1;
-    transition: 1.5s;
-
-}
-
-
-ul li.itens-menu a .icon > span{
+header {
     display: flex;
-    font-size: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005580;
+    padding: 12px;
+    height: 60px;
+    width: 100%;
+}
 
+.logout-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+header ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+header li {
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.material-symbols-outlined {
+    font-size: 36px !important;
+}
+
+.text-icon {
+    font-size: 18px !important;
+}
+
+span {
+    color: white;
 }
 
 .conteudo {
-    margin-left: 100px; /* Ajuste de acordo com a largura do menu lateral */
-    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .formulario {
     display: flex;
-    position: absolute;
     flex-direction: column;
     background-color: #202020;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px  #45d8f1;
-    width: 500px; /* Ajuste conforme necessário */
-    margin: 30px auto;
-    color: white;
-    top: 40%;
-    left: 50%;
-    transform: translate(-39%, -50%);
+    box-shadow: 0 0 10px #005580;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
-.formulario #client{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-.formulario textarea{
-    max-width: 100%;
-    height: auto;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+.formulario h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .formulario label {
-    display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
+.formulario input[type="text"],
 .formulario input[type="datetime-local"],
-.formulario select {
+.formulario select,
+.formulario textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -108,15 +120,51 @@ ul li.itens-menu a .icon > span{
     background-color: #0d7d91;
     border: none;
     border-radius: 5px;
-    color: #fff;
+    color: white;
     font-size: 18px;
     cursor: pointer;
 }
 
-.formulario button:hover {
-    background-color: #1aa8bb;
+@media (max-width: 768px) {
+    .formulario {
+        padding: 15px;
+    }
+
+    .formulario button {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .formulario input[type="text"],
+    .formulario input[type="datetime-local"],
+    .formulario select,
+    .formulario textarea {
+        padding: 8px;
+    }
 }
 
-.formulario h1 {
-    text-align: center;
+@media (max-width: 480px) {
+    .formulario {
+        padding: 10px;
+    }
+
+    .formulario button {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .formulario input[type="text"],
+    .formulario input[type="datetime-local"],
+    .formulario select,
+    .formulario textarea {
+        padding: 6px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 30px !important;
+    }
+
+    .text-icon {
+        font-size: 16px !important;
+    }
 }
