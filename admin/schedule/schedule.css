@@ -22,7 +22,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: #005580;
+    background-color: #801300;
     padding: 12px;
     height: 60px;
     width: 100%;
@@ -54,3 +54,4 @@ a {
 span{
     color: white;
 }
+

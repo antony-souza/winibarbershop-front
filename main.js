@@ -1,4 +1,3 @@
-// Seleção dos elementos da página
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
@@ -12,7 +11,6 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-// Função para realizar login e armazenar o token
 const formLogin = document.querySelector('.sign-in');
 
 formLogin.addEventListener('submit', evento => {
@@ -35,10 +33,14 @@ formLogin.addEventListener('submit', evento => {
     .then(response => response.json())
     .then(data => {
         if (data.token) {
-            const { token } = data;
+            const { token, isAdmin } = data;
             localStorage.setItem('token', token);
 
-            fetchTokenInfo();
+            if (isAdmin) {
+                window.location.href = '/admin/home/home.html';
+            } else {
+                window.location.href = '/src/home/home.html';
+            }
         } else {
             console.error('Erro ao obter token:', data.error || 'Erro desconhecido.');
         }
@@ -48,41 +50,6 @@ formLogin.addEventListener('submit', evento => {
     });
 });
 
-// Função para obter informações usando o token
-function fetchTokenInfo() {
-    const token = localStorage.getItem('token');
-    if (!token) {
-        console.error('Token não encontrado. Por favor, faça login novamente.');
-        return;
-    }
-
-    fetch('http://localhost:8100/gettoken', {
-        method: 'GET',
-        mode: 'cors',
-        headers: {
-            'Authorization': `Bearer ${token}`
-        }
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Failed to fetch token info');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log(data);
-        if (data.success) {
-            window.location.href = '/src/home/home.html';
-        } else {
-            console.error('Erro ao redirecionar', data.error || 'Erro desconhecido.');
-        }
-    })
-    .catch(error => {
-        console.log('Erro:', error);
-    });
-}
-
-// Função para registrar um novo usuário
 const formRegister = document.querySelector('.sign-up');
 
 formRegister.addEventListener('submit', evento => {
