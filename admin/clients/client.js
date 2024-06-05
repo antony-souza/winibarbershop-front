@@ -1,18 +1,5 @@
-const logout = document.getElementById('logoutButton').addEventListener('click', function() {
-  
-    localStorage.removeItem('token');
-    
-    if (localStorage.getItem('token') === null) {
-       
-        window.location.href = '/main.html';
-    } else {
-        
-        throw new Error("Falha ao sair da sessão!");
-    }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
-    const loadUsersButton = document.getElementById('loadUsersButton');
+    const loadUsersButton = document.getElementById('loadclientButton');
 
     loadUsersButton.addEventListener('click', () => {
         fetch('http://localhost:8100/admin/users')
@@ -23,27 +10,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json();
             })
             .then(data => {
-                const usersTableBody = document.querySelector('#myTable tbody');
-                usersTableBody.innerHTML = '';
+                console.log('Resposta do servidor:', data); // Loga a resposta do servidor para inspeção
 
-                data.users.forEach(user => {
-                    const row = document.createElement('tr');
-                    const idCell = document.createElement('td');
-                    const nameCell = document.createElement('td');
-                    const emailCell = document.createElement('td');
-                    const isAdminCell = document.createElement('td');
+                if (!data.clientList) {
+                    throw new Error('Formato de dados inesperado');
+                }
 
-                    idCell.textContent = user._id; 
-                    nameCell.textContent = user.name;
-                    emailCell.textContent = user.email;
-                    isAdminCell.textContent = user.isAdmin ? 'Sim' : 'Não';
+                const clientContainer = document.getElementById('clientContainer');
+                clientContainer.innerHTML = ''; // Limpa o contêiner antes de adicionar novos dados
 
-                    row.appendChild(idCell);
-                    row.appendChild(nameCell);
-                    row.appendChild(emailCell);
-                    row.appendChild(isAdminCell);
+                data.clientList.forEach((item, index) => {
+                    const clientItem = document.createElement('div');
+                    clientItem.classList.add('client-item');
 
-                    usersTableBody.appendChild(row);
+                    const title = document.createElement('h3');
+                    title.textContent = `ID ${index + 1}`;
+                    clientItem.appendChild(title);
+
+                    const client = document.createElement('p');
+                    client.textContent = `Nome: ${item.name}`;
+                    clientItem.appendChild(client);
+
+                    const email = document.createElement('p');
+                    email.textContent = `Email: ${item.email}`;
+                    clientItem.appendChild(email);
+
+                    const isAdmin = document.createElement('p');
+                    isAdmin.textContent = `Admin: ${item.isAdmin ? 'Sim' : 'Não'}`;
+                    clientItem.appendChild(isAdmin);
+
+                    // Adiciona o item de cliente ao contêiner
+                    clientContainer.appendChild(clientItem);
                 });
             })
             .catch(error => console.error('Erro ao buscar usuários:', error));

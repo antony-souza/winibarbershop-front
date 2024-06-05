@@ -13,42 +13,15 @@
         <button id="logoutButton" class="logout-button">Sair</button>
         <ul>
             <li>
-                <a href="/admin/home/home.html"><span class="material-symbols-outlined icon">
-                    house
-                </span>
-                <span class="text-icon">Início</span>
-            <a href="/admin/clients/client.html"><span class="material-symbols-outlined icon">
-                    account_box
-                </span>
-                <span class="text-icon">Clientes</span>
-            </a>
-                <a href="/admin/schedule/schedule.html"><span class="material-symbols-outlined icon">
-                    calendar_month
-                </span>
-                <span class="text-icon">Agendamentos</span>
-            </a>
-                <a href="/admin/help/help.html"><span class="material-symbols-outlined icon">
-                    help_center
-                </span>
-                <span class="text-icon">Ajuda</span>
-            </a>
+                <a href="/admin/home/home.html"><span class="material-symbols-outlined icon">house</span><span class="text-icon">Início</span></a>
+                <a href="/admin/clients/client.html"><span class="material-symbols-outlined icon">account_box</span><span class="text-icon">Clientes</span></a>
+                <a href="/admin/schedule/schedule.html"><span class="material-symbols-outlined icon">calendar_month</span><span class="text-icon">Agendamentos</span></a>
+                <a href="/admin/help/help.html"><span class="material-symbols-outlined icon">help_center</span><span class="text-icon">Ajuda</span></a>
             </li>
         </ul>
     </header>
-    <button id="loadUsersButton">Listar Usuários</button>
-    <table border="1" id="myTable">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Admin</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Usuários serão inseridos aqui -->
-        </tbody>
-    </table>
+    <button id="loadclientButton">Listar Usuários</button>
+    <div id="clientContainer" class="client-container"></div>
     <script src="client.js"></script>
 </body>
 </html>

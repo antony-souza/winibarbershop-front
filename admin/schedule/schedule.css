@@ -55,3 +55,39 @@ span{
     color: white;
 }
 
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.schedule-item {
+    border: 1px solid #c25959;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #202020;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 20px;
+}
+
+.schedule-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.schedule-item p {
+    margin: 5px 0;
+}
+
+#loadScheduleButton{
+    font-size: 18px;
+    margin-top: 12px;
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: #202020;
+    color: wheat;
+    border: 1px solid #c25959;
+    padding: 5px;
+}
