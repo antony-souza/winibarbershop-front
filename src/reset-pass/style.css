@@ -46,7 +46,7 @@ body{
     margin: 15px 0 10px;
 }
 
-.container button{
+.container a, button {
     background-color: #35455f;
     color: #fff;
     font-size: 12px;
@@ -73,6 +73,7 @@ body{
     flex-direction: column;
     padding: 0 40px;
     height: 100%;
+    gap: 12px;
 }
 
 .container input{
