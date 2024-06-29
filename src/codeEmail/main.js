@@ -17,16 +17,13 @@ formReset.addEventListener('submit', e =>{
     })
     .then((response) => response.json())
     .then((data) => {
-    document.getElementById('codeMail').value = '';
-    
-    if(data.success){
+        if(data.success){
+        document.getElementById('codeMail').value = '';
         window.location.href = '/src/newPassword-reset/newPassword.html';
     }else {
-        
         console.error('Envio de código falhou:', data.error || 'Erro desconhecido.');
+        return alert('Falha no código!')
     }
      console.log(data);
 
     })})
-
-

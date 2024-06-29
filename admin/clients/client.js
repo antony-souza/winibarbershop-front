@@ -1,8 +1,21 @@
+const logout = document.getElementById('logoutButton').addEventListener('click', function() {
+  
+    localStorage.removeItem('token');
+    
+    if (localStorage.getItem('token') === null) {
+       
+        window.location.href = '/main.html';
+    } else {
+        
+        throw new Error("Falha ao sair da sessão!");
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const loadUsersButton = document.getElementById('loadclientButton');
 
     loadUsersButton.addEventListener('click', () => {
-        fetch('http://localhost:8100/admin/users')
+        fetch('/admin/users')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro na requisição');

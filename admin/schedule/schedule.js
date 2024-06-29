@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadScheduleButton = document.getElementById('loadScheduleButton');
 
     loadScheduleButton.addEventListener('click', () => {
-        fetch('http://localhost:8100/admin/schedule') 
+        fetch('/admin/schedule') 
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro na requisição');

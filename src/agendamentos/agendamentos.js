@@ -23,7 +23,7 @@ formAgendamento.addEventListener('submit', e => {
 
     const token = localStorage.getItem('token');
 
-    fetch('http://localhost:8100/Schedule', {
+    fetch('http://3.142.52.13:8100/Schedule', {
         method: 'POST',
         mode: 'cors',
         headers: {

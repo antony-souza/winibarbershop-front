@@ -23,10 +23,10 @@ formNewPassword.addEventListener('submit', e => {
         document.getElementById('newPassword-confirm').value = '';
         
         if(data.success){
-            window.location.href = '/src/login-register/index.html';
+            window.location.href = '../main.html';
         }else {
-            
             console.error('Error na atualização da senha:', data.error || 'Erro desconhecido.');
+            return alert('Problema na nova senha!')
         }
 
         console.log(data);

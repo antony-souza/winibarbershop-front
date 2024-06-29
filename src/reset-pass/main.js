@@ -16,13 +16,13 @@ formReset.addEventListener('submit', e =>{
     })
     .then((response) => response.json())
     .then((data) => {
-    document.getElementById('email-login').value = '';
     
     if(data.success){
+        document.getElementById('email-login').value = '';
         window.location.href = '/src/codeEmail/codeEmail.html';
     }else {
-        
         console.error('Envio de código falhou:', data.error || 'Erro desconhecido.');
+        return alert('Falha no email!')
     }
      console.log(data);
 

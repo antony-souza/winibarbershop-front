@@ -20,7 +20,7 @@ const logout = document.getElementById('logoutButton').addEventListener('click',
             const message = document.getElementById("message").value;
 
             try {
-                const response = await fetch("http://localhost:8100/v1/chat/completions", {
+                const response = await fetch("/v1/chat/completions", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

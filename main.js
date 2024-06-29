@@ -19,7 +19,7 @@ formLogin.addEventListener('submit', evento => {
     const emailLogin = document.getElementById('email-login').value;
     const passwordLogin = document.getElementById('password-login').value;
 
-    fetch('http://18.116.241.241:8100/auth', {
+    fetch('http://localhost:8100/auth', {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -58,8 +58,8 @@ formRegister.addEventListener('submit', evento => {
     const nameRegister = document.getElementById('name-register').value;
     const emailRegister = document.getElementById('email-register').value;
     const passwordRegister = document.getElementById('password-register').value;
-    
-    fetch('http://18.116.241.241:8100/createUser', {
+        
+    fetch('http://localhost:8100/createUser', {
         method: 'POST',
         mode: 'cors',
         headers: {
